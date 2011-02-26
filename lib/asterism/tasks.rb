@@ -1,7 +1,7 @@
 require 'java'
 
 module Asterism
-  def self.run(&block)
+  def do_async(&block)
     java.util.concurrent.FutureTask.new(&block).run
   end
 end
