@@ -28,29 +28,19 @@ module Asterism
   java_import 'akka.stm.Ref'
 
   def ref(x)
-    return AsterismRef.new(x)
+    Ref.new(x)
   end
 
   def atomically(&block)
-    AsterismAtomic.new(&block).execute
+    AsterismAtomic.new.set_proc(&block).execute
   end
 
-  class AsterismRef < Ref
-    def mod
-      old_val = self.get
-      new_val = yield(old_val)
-      self.set(new_val)
-    end
-  end
-
-  
   class AsterismAtomic < Atomic
-    @block
-    
-    def initialize(&block)
+    def set_proc(&block)
       @block = block
+      self
     end
-    
+
     def atomically
       @block.call
     end

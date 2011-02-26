@@ -6,7 +6,7 @@ include Asterism
 
 def counter(ref)
   atomically do
-    ref.mod {|val| val + 1 }
+    ref.alter {|val| val + 1 }
   end
 end
 

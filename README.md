@@ -8,6 +8,8 @@ Java Virtual Machine using JRuby.
 
 [Akka Homepage](http://akka.io/)
 
+NOTE: things aren't working quite right yet.
+
 Example
 -------
 Software Transactional Memory
