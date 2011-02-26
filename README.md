@@ -32,7 +32,10 @@ First, run the dependency install task:
 
 This will get all the necessary dependencies for building and running Asterism.
 
-Next, build the Asterism gem.  Instructions on this will becoming shortly.
+Next, build the Asterism gem and install it:
+
+    rake gem
+    gem install pkg/asterism-0.1.gem
 
 Version
 -------
