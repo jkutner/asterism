@@ -210,14 +210,12 @@ spec = Gem::Specification.new do |s|
   s.authors = ["Joe Kutner"]
   s.email = 'jpkutner@gmail.com'
   s.homepage = "https://github.com/jkutner/asterism"
-  s.platform = Gem::Platform::RUBY
   s.summary = "JRuby Concurrency with Akka"
-  s.required_ruby_version = '>= 1.8.2'
   s.license = "GPL3"
-
+  s.extra_rdoc_files = ["LICENSE.txt", "GPL.txt"]
   s.require_paths = ["lib"]
-    s.has_rdoc          = true
-#    s.rubyforge_project = 'asterism'
+  s.has_rdoc          = true
+  s.rubyforge_project = 'asterism'
   s.description = <<EOF
 Asterism provides a Ruby friendly wrapper for the Akka library.  Thus, it only runs on the
 Java Virtual Machine using JRuby.
