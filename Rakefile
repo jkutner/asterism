@@ -1,3 +1,13 @@
+# This file is part of the Asterism project.
+#
+# This application is free software; you can redistribute it and/or
+# modify it under the terms of the GNU license defined in the
+# LICENSE.txt file.
+#
+# Copyright (c) 2011 Joe Kutner. All rights reserved.
+#
+# * Authors:  Joe Kutner
+
 require 'rubygems'
 
 require 'rake'
@@ -8,7 +18,20 @@ require 'spec/rake/spectask'
 
 
 namespace :deps do
-  task :install do
+
+  task :install => [:install_maven_gem, :install_jars]
+
+  task :install_maven_gem do
+    begin
+      require 'fileutils'
+      FileUtils.mkdir 'tmp'
+      exec "cd tmp; git clone git://github.com/jkutner/maven_gem.git; cd maven_gem; rake install"
+    ensure
+      FileUtils.rm_rf 'tmp'
+    end
+  end
+
+  task :install_jars do
     require 'maven_gem'
 
     # TODO
