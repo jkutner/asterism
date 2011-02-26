@@ -6,6 +6,8 @@ Description
 Asterism provides a Ruby friendly wrapper for the Akka library.  Thus, it only runs on the
 Java Virtual Machine using JRuby.
 
+[Akka Homepage](http://akka.io/)
+
 Example
 -------
 Software Transactional Memory
