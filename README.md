@@ -14,7 +14,7 @@ Software Transactional Memory
 
     r = ref(1)
     atomically do
-        ref.mod {|val| val + 1 }
+        r.mod {|val| val + 1 }
     end
 
 Asynchronous Tasks
