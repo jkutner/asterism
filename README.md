@@ -41,6 +41,10 @@ Next, build the Asterism gem and install it:
     rake gem
     gem install pkg/asterism-0.1.gem
 
+TODO
+-----
++ Switch to gemify-maven-plugin instead of maven_gem
+
 Version
 -------
 0.1
