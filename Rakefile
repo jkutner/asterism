@@ -43,96 +43,97 @@ namespace :deps do
     #   MavenGem.intall
     # end
 
-    MavenGem.install(
-        "org.multiverse",
-        "multiverse-core",
-        "0.6.1",
-        "http://repo1.maven.org/maven2/"
-    )
-    MavenGem.install(
-        "junit",
-        "junit",
-        "3.8.1",
-        "http://download.java.net/maven/2"
-    )
-    MavenGem.install(
-        "args4j",
-        "args4j",
-        "2.0.16",
-        "http://download.java.net/maven/2"
-    )
-    MavenGem.install(
-        "asm",
-        "asm",
-        "3.2",
-        "http://repo1.maven.org/maven2"
-    )
-    MavenGem.install(
-        "asm",
-        "asm-tree",
-        "3.2",
-        "http://repo1.maven.org/maven2"
-    )
-    MavenGem.install(
-        "asm",
-        "asm-analysis",
-        "3.2",
-        "http://repo1.maven.org/maven2"
-    )
-    MavenGem.install(
-        "asm",
-        "asm-commons",
-        "3.2",
-        "http://repo1.maven.org/maven2"
-    )
-    MavenGem.install(
-        "asm",
-        "asm-util",
-        "3.2",
-        "http://repo1.maven.org/maven2"
-    )
-    MavenGem.install(
-        "org.multiverse",
-        "multiverse-instrumentation",
-        "0.6.1",
-        "http://repo1.maven.org/maven2",
-        {'asm.version' => '3.2'}
-    )
-    MavenGem.install(
-        "com.google.code.gson",
-        "gson",
-        "1.4",
-        "http://repo2.maven.org/maven2"
-    )
-    MavenGem.install(
-        "com.google.collections",
-        "google-collections",
-        "1.0",
-        "http://repo2.maven.org/maven2"
-    )
-    MavenGem.install(
-        "org.multiverse",
-        "multiverse-benchy",
-        "0.6.1",
-        "http://repo1.maven.org/maven2"
-    )
-    MavenGem.install(
-        "asm",
-        "asm-all",
-        "3.2",
-        "http://repo1.maven.org/maven2"
-    )
-    MavenGem.install(
-        "org.multiverse",
-        "multiverse-alpha-unborn",
-        "0.6.1",
-        "http://repo1.maven.org/maven2",
-        {'asm.version' => '3.2'}
-)
+#    MavenGem.install(
+#        "org.multiverse",
+#        "multiverse-core",
+#        "0.6.1",
+#        "http://repo1.maven.org/maven2/"
+#    )
+#    MavenGem.install(
+#        "junit",
+#        "junit",
+#        "3.8.1",
+#        "http://download.java.net/maven/2"
+#    )
+#    MavenGem.install(
+#        "args4j",
+#        "args4j",
+#        "2.0.16",
+#        "http://download.java.net/maven/2"
+#    )
+#    MavenGem.install(
+#        "asm",
+#        "asm",
+#        "3.2",
+#        "http://repo1.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "asm",
+#        "asm-tree",
+#        "3.2",
+#        "http://repo1.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "asm",
+#        "asm-analysis",
+#        "3.2",
+#        "http://repo1.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "asm",
+#        "asm-commons",
+#        "3.2",
+#        "http://repo1.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "asm",
+#        "asm-util",
+#        "3.2",
+#        "http://repo1.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "org.multiverse",
+#        "multiverse-instrumentation",
+#        "0.6.1",
+#        "http://repo1.maven.org/maven2",
+#        {'asm.version' => '3.2'}
+#    )
+#    MavenGem.install(
+#        "com.google.code.gson",
+#        "gson",
+#        "1.4",
+#        "http://repo2.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "com.google.collections",
+#        "google-collections",
+#        "1.0",
+#        "http://repo2.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "org.multiverse",
+#        "multiverse-benchy",
+#        "0.6.1",
+#        "http://repo1.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "asm",
+#        "asm-all",
+#        "3.2",
+#        "http://repo1.maven.org/maven2"
+#    )
+#    MavenGem.install(
+#        "org.multiverse",
+#        "multiverse-alpha-unborn",
+#        "0.6.1",
+#        "http://repo1.maven.org/maven2",
+#        {'asm.version' => '3.2'}
+#)
+
     MavenGem.install(
         "org.multiverse",
         "multiverse-alpha",
-        "0.6.1",
+        "0.6.2",
         "http://repo1.maven.org/maven2"
     )
     MavenGem.install(
@@ -151,7 +152,7 @@ namespace :deps do
         "jsr166x",
         "jsr166x",
         "1.0",
-        "http://www.scalablesolutions.se/akka/repository"
+        "http://akka.io/repository"
     )
     MavenGem.install(
         "ch.qos.logback",
@@ -182,23 +183,23 @@ namespace :deps do
         "net.lag",
         "configgy",
         "2.0.2-nologgy",
-        "http://www.scalablesolutions.se/akka/repository")
+        "http://akka.io/repository")
     MavenGem.install(
         "com.eaio",
         "uuid",
         "3.2",
-        "http://www.scalablesolutions.se/akka/repository")
+        "http://akka.io/repository")
     MavenGem.install(
         "se.scalablesolutions.akka",
         "akka-actor",
-        "1.0-RC3",
-        "http://www.scalablesolutions.se/akka/repository"
+        "1.0",
+        "http://akka.io/repository"
     )
     MavenGem.install(
         "se.scalablesolutions.akka",
         "akka-stm",
-        "1.0-RC3",
-        "http://www.scalablesolutions.se/akka/repository"
+        "1.0",
+        "http://akka.io/repository"
     )
   end
 end
