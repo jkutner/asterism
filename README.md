@@ -44,6 +44,7 @@ Next, build the Asterism gem and install it:
 TODO
 -----
 + Switch to gemify-maven-plugin instead of maven_gem
++ Configure the log level of logback - its noisey at DEBUG
 
 Version
 -------
