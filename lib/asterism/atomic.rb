@@ -40,13 +40,25 @@ module Asterism
   java_import 'akka.stm.Atomic'
   java_import 'akka.stm.Ref'
   java_import 'akka.stm.TransactionFactoryBuilder'
+  java_import 'org.multiverse.api.TraceLevel'
+  java_import 'akka.util.Duration'
 
   def ref(x)
     Ref.new(x)
   end
 
   def atomically(&block)
-    tx = TransactionFactoryBuilder.new.setReadonly(false).build
+    tx = TransactionFactoryBuilder.new.
+        setReadonly(false).
+        setSpeculative(false).
+        setTrackReads(false).
+#        setQuickRelease(false).
+#        setWriteSkew(false).
+#        setTimeout(Duration.new(9,"seconds")).
+#        setMaxRetries(99999).
+#        setBlockingAllowed(false).
+#        setTraceLevel(TraceLevel::None)
+        build
     AsterismAtomic.new(tx).set_proc(&block).execute
   end
 
@@ -57,7 +69,15 @@ module Asterism
     end
 
     def atomically
-      @block.call
+      begin
+        @block.call
+      rescue NativeException => e
+        if e.cause.java_class.package.name.include? "org.multiverse"
+          raise e.cause
+        else
+          raise e
+        end
+      end
     end
   end
 end
