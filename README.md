@@ -16,14 +16,17 @@ Software Transactional Memory
 
     r = ref(1)
     atomically do
-        r.mod {|val| val + 1 }
+        r.alter {|val| val + 1 }
     end
 
 Asynchronous Tasks
 
-    async do
-        puts 'Look ma, another thread
+    t = task do
+        puts 'Look ma, another thread'
+        42
     end
+    t.run
+    t.get    #=> 42
 
 Setup
 -----
