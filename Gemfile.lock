@@ -1,0 +1,37 @@
+MAVEN
+  remote: http://akka.io/repository/
+  specs:
+    mvn:ch.qos.logback:logback-classic (0.9.24-java)
+      mvn:ch.qos.logback:logback-core (~> 0.0.a)
+      mvn:org.slf4j:slf4j-api (~> 1.0.a)
+    mvn:ch.qos.logback:logback-core (0.9.24-java)
+    mvn:com.eaio:uuid (3.2.0-java)
+    mvn:jsr166x:jsr166x (1.0.0-java)
+    mvn:net.lag:configgy (2.0.2.nologgy-java)
+      mvn:org.scala-lang:scala-library (~> 2.0.a)
+    mvn:org.fusesource.hawtdispatch:hawtdispatch (1.0.0-java)
+    mvn:org.fusesource.hawtdispatch:hawtdispatch-scala (1.0.0-java)
+      mvn:org.fusesource.hawtdispatch:hawtdispatch (~> 1.0.a)
+    mvn:org.multiverse:multiverse-alpha (0.6.2-java)
+    mvn:org.scala-lang:scala-library (2.8.1-java)
+    mvn:org.slf4j:slf4j-api (1.6.1-java)
+    mvn:se.scalablesolutions.akka:akka-actor (1.0.0-java)
+      mvn:ch.qos.logback:logback-classic (~> 0.0.a)
+      mvn:com.eaio:uuid (~> 3.0.a)
+      mvn:jsr166x:jsr166x (~> 1.0.a)
+      mvn:net.lag:configgy (~> 2.0.a)
+      mvn:org.fusesource.hawtdispatch:hawtdispatch-scala (~> 1.0.a)
+      mvn:org.scala-lang:scala-library (~> 2.0.a)
+    mvn:se.scalablesolutions.akka:akka-stm (1.0.0-java)
+      mvn:org.multiverse:multiverse-alpha (~> 0.0.a)
+      mvn:org.scala-lang:scala-library (~> 2.0.a)
+      mvn:se.scalablesolutions.akka:akka-actor (~> 1.0.a)
+
+GEM
+  specs:
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  mvn:se.scalablesolutions.akka:akka-stm (= 1.0)!
