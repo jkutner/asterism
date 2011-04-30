@@ -9,18 +9,7 @@
 # * Authors:  Joe Kutner
 
 require 'java'
-require 'multiverse-alpha'
-require 'hawtdispatch'
-require 'hawtdispatch-scala'
-require 'jsr166x'
-require 'logback-core'
-require 'slf4j-api'
-require 'logback-classic'
-require 'configgy'
-require 'scala-library'
-require 'uuid'
-require 'akka-actor'
-require 'akka-stm'
+require 'mvn:se.scalablesolutions.akka:akka-stm'
 
 module Asterism
 
